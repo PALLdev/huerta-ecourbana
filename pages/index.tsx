@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import BlogItem from "../components/blog/BlogItem";
+import Slider from "../components/slider/slider";
+import FlechaAdelante from "../components/ui/FlechaAdelante";
+import FlechaAtras from "../components/ui/FlechaAtras";
+import LogoFacebook from "../components/ui/LogoFacebook";
+import LogoInstagram from "../components/ui/LogoInstagram";
 
 const Home: NextPage = () => {
   const services = [
@@ -49,9 +53,17 @@ const Home: NextPage = () => {
   return (
     <>
       {/* START HERO */}
-      <header className="bg-primary pt-8 pb-1 md:pb-7 md:px-12 ">
+      <header className="bg-primary pt-8 pb-1 md:px-12 relative">
+        <div className="absolute h-full w-full top-0 left-0 bg-cover opacity-25">
+          <Image
+            src="/img/background/fondo-2.jpg"
+            alt="fondo"
+            layout="fill"
+            priority
+          />
+        </div>
         <div className="container flex flex-col justify-between items-center md:flex-row">
-          <div className="md:w-3/5">
+          <div className="md:w-3/5 z-50">
             <h6 className="text-white text-xl">Bienvenido!</h6>
             <h1 className="text-4xl md:text-5xl tracking-widest uppercase text-white font-semibold mb-8">
               Somos la Huerta Eco-Urbana
@@ -59,8 +71,18 @@ const Home: NextPage = () => {
             <p className="text-xl mt-3 text-white">
               Únete a la huerta siguiendo nuestras redes sociales
             </p>
+            <div className="py-3">
+              <p className="text-white italic flex gap-x-2 mb-1">
+                <LogoInstagram />
+                /la.ecohuerta_urbana
+              </p>
+              <p className="text-white italic flex">
+                <LogoFacebook />
+                @LaHuertaEcoUrbana
+              </p>
+            </div>
           </div>
-          <div className="md:w-2/5 pt-6">
+          <div className="md:w-2/5 pt-6 z-50">
             <Image
               src="/logo-huerta.png"
               alt="Logo de la Huerta eco-urbana"
@@ -108,17 +130,27 @@ const Home: NextPage = () => {
       {/* END SERVICIOS */}
 
       {/* START PRODUCTOS y BLOG */}
-      <section className="flex w-full py-12 bg-borders">
-        <main className="w-7/12">
+      <section className="md:flex w-full py-12 bg-borders">
+        <main className="md:w-7/12">
           <div className="text-center">
-            <h1 className="font-semibold text-2xl">Últimos productos</h1>
+            <h1 className="font-bold text-3xl tracking-wides md:font-semibold md:text-2xl">
+              Últimos productos
+            </h1>
             <div className="line"></div>
           </div>
+
+          {/* PRODUCTS SLIDER START */}
+          <div className="my-12">
+            <Slider />
+          </div>
+          {/* PRODUCTS SLIDER END */}
         </main>
 
-        <aside className="w-5/12">
+        <aside className="md:w-5/12">
           <div className="text-center">
-            <h3 className="font-semibold text-2xl">Blogs destacados</h3>
+            <h3 className="font-bold text-3xl tracking-wides md:font-semibold md:text-2xl">
+              Blogs destacados
+            </h3>
             <div className="line"></div>
           </div>
           <div className="grid grid-rows-3">
