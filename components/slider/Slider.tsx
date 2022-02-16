@@ -31,8 +31,8 @@ const CarouselProduct: FC<ProductProps> = ({
   prodImageSrc,
 }) => {
   return (
-    <div className="border-2 rounded-xl shadow-md my-4 bg-white min-w-full">
-      <div className="relative w-full h-96">
+    <div className="border rounded-xl shadow-md my-4 bg-white min-w-full">
+      <div className="relative w-full h-80">
         <Image
           src={prodImageSrc}
           layout="fill"

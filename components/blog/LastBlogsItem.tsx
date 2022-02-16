@@ -21,22 +21,22 @@ const LastBlogsItem: FC<BlogItemProps> = ({
   return (
     <article
       key={key}
-      className="flex flex-col justify-between w-full rounded-md
-              lg:w-4/5 lg:mx-auto border"
+      className="flex flex-col justify-between w-full rounded-md border
+              lg:w-4/5 md:mx-auto md:flex-row"
     >
-      <div className="w-full h-52">
+      <div className="w-full h-52 md:w-1/3 md:h-44">
         <div className="w-full h-full relative">
           <Image
             src={imgSrc}
             alt={`Foto del articulo ${title}`}
             layout="fill"
-            className="rounded-t-md lg:rounded-bl-md"
+            className="rounded-t-md md:rounded-bl-md md:rounded-tr-none"
             objectFit="cover"
           />
         </div>
       </div>
 
-      <div className="w-full px-2">
+      <div className="w-full px-2 md:w-2/3 md:pl-4">
         <h2 className="font-semibold text-gray-800 py-4">{title}</h2>
         <div className="flex items-center mt-auto pb-4">
           <div className="flex items-center">

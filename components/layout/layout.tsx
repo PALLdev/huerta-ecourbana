@@ -15,6 +15,9 @@ const Layout: FC = ({ children }) => {
       </Head>
       <Navbar />
       <main>{children}</main>
+      <footer className="bg-slate-700 p-4">
+        <h3 className="text-center text-white">Diseñado por @PALLdev</h3>
+      </footer>
     </>
   );
 };

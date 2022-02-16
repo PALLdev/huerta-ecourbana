@@ -129,7 +129,7 @@ const Home: NextPage = () => {
       {/* END SERVICIOS */}
 
       {/* START PRODUCTOS y BLOG */}
-      <section className="md:flex w-full py-12 bg-borders">
+      <section className="md:flex w-full pt-12 pb-2 bg-borders">
         <main className="md:w-7/12">
           <div className="text-center">
             <h1 className="font-bold text-3xl tracking-wides md:font-semibold md:text-2xl">
@@ -139,10 +139,9 @@ const Home: NextPage = () => {
           </div>
 
           {/* PRODUCTS SLIDER START */}
-          <div className="my-12 px-4">
+          <div className="my-12 px-4 md:pr-0">
             <Slider />
           </div>
-          {/* PRODUCTS SLIDER END */}
         </main>
 
         <aside className="md:w-5/12">
@@ -152,7 +151,7 @@ const Home: NextPage = () => {
             </h3>
             <div className="line"></div>
           </div>
-          <div className="grid grid-rows-3 gap-4 px-4 py-8">
+          <div className="grid grid-rows-3 gap-6 px-4 py-8">
             {blogs.map(({ title, author, imgSrc, date, authorImgSrc }, i) => (
               <LastBlogsItem
                 key={i}
