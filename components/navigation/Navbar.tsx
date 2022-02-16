@@ -6,8 +6,8 @@ import LogoFacebook from "../ui/LogoFacebook";
 
 const Navbar = () => {
   const links = [
-    { text: "Nosotros", href: "/" },
-    { text: "Tienda", href: "/" },
+    { text: "Nosotros", href: "/nosotros" },
+    { text: "Tienda", href: "/tienda" },
     { text: "Blog", href: "/blog" },
   ];
 

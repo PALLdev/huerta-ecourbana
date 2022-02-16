@@ -53,7 +53,7 @@ const Slider = () => {
   return (
     <Carousel
       responsive={responsive}
-      itemClass={"md:px-1"}
+      itemClass={"md:px-1 lg:px-2"}
       swipeable={true}
       draggable={true}
     >
