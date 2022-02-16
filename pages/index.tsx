@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Slider from "../components/slider/slider";
-import FlechaAdelante from "../components/ui/FlechaAdelante";
-import FlechaAtras from "../components/ui/FlechaAtras";
+import LastBlogsItem from "../components/blog/LastBlogsItem";
+import Slider from "../components/slider/Slider";
 import LogoFacebook from "../components/ui/LogoFacebook";
 import LogoInstagram from "../components/ui/LogoInstagram";
 
@@ -140,7 +139,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* PRODUCTS SLIDER START */}
-          <div className="my-12">
+          <div className="my-12 px-4">
             <Slider />
           </div>
           {/* PRODUCTS SLIDER END */}
@@ -153,38 +152,16 @@ const Home: NextPage = () => {
             </h3>
             <div className="line"></div>
           </div>
-          <div className="grid grid-rows-3">
+          <div className="grid grid-rows-3 gap-4 px-4 py-8">
             {blogs.map(({ title, author, imgSrc, date, authorImgSrc }, i) => (
-              <article key={i} className="mx-auto pt-8 lg:w-4/5 lg:flex">
-                <Image
-                  src={imgSrc}
-                  alt={`Foto del articulo ${title}`}
-                  width={180}
-                  height={200}
-                  className="rounded-t-md lg:rounded-tr-none lg:rounded-bl-md"
-                />
-                <div className="bg-white p-4 rounded-b-md lg:rounded-bl-none lg:rounded-tr-md lg:grow-0">
-                  <h2 className="font-semibold mb-4 text-gray-800">{title}</h2>
-
-                  <div className="flex items-center mt-auto">
-                    <div className="flex items-center">
-                      <Image
-                        src={authorImgSrc}
-                        alt={`Foto del perfil de ${author}`}
-                        height={40}
-                        width={40}
-                        className="rounded-full"
-                      />
-                      <div className="ml-3">
-                        <p className="font-semibold text-sm text-gray-800">
-                          {author}
-                        </p>
-                        <p className="text-sm text-gray-600">{date}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              <LastBlogsItem
+                key={i}
+                title={title}
+                author={author}
+                authorImgSrc={authorImgSrc}
+                imgSrc={imgSrc}
+                date={date}
+              />
             ))}
           </div>
         </aside>
