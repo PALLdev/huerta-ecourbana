@@ -130,23 +130,23 @@ const Home: NextPage = () => {
 
       {/* START PRODUCTOS y BLOG */}
       <section className="md:flex w-full pt-12 pb-2 bg-borders">
-        <main className="md:w-7/12">
+        <main className="md:w-7/12 lg:w-8/12">
           <div className="text-center">
-            <h1 className="font-bold text-3xl tracking-wides md:font-semibold md:text-2xl">
+            <h1 className="font-bold text-2xl tracking-wides md:font-semibold md:text-3xl">
               Últimos productos
             </h1>
             <div className="line"></div>
           </div>
 
           {/* PRODUCTS SLIDER START */}
-          <div className="my-12 px-4 md:pr-0">
+          <div className="my-12 px-8">
             <Slider />
           </div>
         </main>
 
-        <aside className="md:w-5/12">
+        <aside className="md:w-5/12 lg:w-4/12">
           <div className="text-center">
-            <h3 className="font-bold text-3xl tracking-wides md:font-semibold md:text-2xl">
+            <h3 className="font-bold text-2xl tracking-wides md:font-semibold md:text-3xl">
               Blogs destacados
             </h3>
             <div className="line"></div>

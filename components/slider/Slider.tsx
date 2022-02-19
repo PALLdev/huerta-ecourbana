@@ -10,11 +10,11 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 640 },
+    breakpoint: { max: 1023, min: 640 },
     items: 2,
   },
   mobile: {
-    breakpoint: { max: 640, min: 0 },
+    breakpoint: { max: 639, min: 0 },
     items: 1,
   },
 };
@@ -31,7 +31,7 @@ const CarouselProduct: FC<ProductProps> = ({
   prodImageSrc,
 }) => {
   return (
-    <div className="border rounded-xl shadow-md my-4 bg-white min-w-full">
+    <div className="border rounded-xl shadow-md my-4 bg-white min-w-full cursor-pointer lg:hover:scale-105 lg:transition-all">
       <div className="relative w-full h-80">
         <Image
           src={prodImageSrc}
@@ -41,9 +41,11 @@ const CarouselProduct: FC<ProductProps> = ({
           className="rounded-t-xl"
         />
       </div>
-      <div className="p-8 text-center">
-        <h3 className="text-3xl font-semibold mb-4">{prodName}</h3>
-        <p className="text-2xl font-medium">${prodPrice}</p>
+      <div className="p-8 text-left">
+        <h3 className="text-2xl font-semibold mb-4 text-slate-800">
+          {prodName}
+        </h3>
+        <p className="text-xl font-medium text-slate-700">${prodPrice}</p>
       </div>
     </div>
   );
@@ -53,9 +55,10 @@ const Slider = () => {
   return (
     <Carousel
       responsive={responsive}
-      itemClass={"md:px-1 lg:px-2"}
+      itemClass={"md:px-1 lg:px-4"}
       swipeable={true}
       draggable={true}
+      ssr={true}
     >
       <CarouselProduct
         prodImageSrc="/img/s-1.jpg"

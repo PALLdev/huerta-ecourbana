@@ -5,7 +5,7 @@ const NosotrosPage: NextPage = () => {
     <section className="grid gap-8 mb-12 md:container">
       <h1 className="text-center font-bold text-4xl py-6">¿Quienes somos?</h1>
       <div className="w-full mx-auto max-w-4xl">
-        <article className="grid grid-cols-2 gap-6 text-center mb-12">
+        <article className="grid grid-cols-2 gap-8 text-center mb-12">
           <div className="image-container">
             <img
               src="/img/background/fondo-2.jpg"
@@ -13,7 +13,7 @@ const NosotrosPage: NextPage = () => {
               className="rounded-xl"
             />
           </div>
-          <div className="text-left">
+          <div className="text-left self-center">
             <h3 className="font-bold text-xl mb-4">Sobre nosotros</h3>
             <p>
               Desde el año 2016 prestando servicios de mantención
@@ -22,7 +22,7 @@ const NosotrosPage: NextPage = () => {
             </p>
           </div>
         </article>
-        <article className="grid grid-cols-2 gap-6 text-center mb-12">
+        <article className="grid grid-cols-2 gap-8 text-center mb-12">
           <div className="image-container order-1">
             <img
               src="/img/background/fondo-1.jpg"
@@ -30,7 +30,7 @@ const NosotrosPage: NextPage = () => {
               className="rounded-xl"
             />
           </div>
-          <div className="text-left">
+          <div className="text-left self-center">
             <h3 className="font-bold text-xl mb-4">Misión</h3>
             <p>
               Desde el año 2016 prestando servicios de mantención
@@ -39,7 +39,7 @@ const NosotrosPage: NextPage = () => {
             </p>
           </div>
         </article>
-        <article className="grid grid-cols-2 gap-6 text-center">
+        <article className="grid grid-cols-2 gap-8 text-center">
           <div className="image-container">
             <img
               src="/img/background/fondo-1.jpg"
@@ -47,7 +47,7 @@ const NosotrosPage: NextPage = () => {
               className="rounded-xl"
             />
           </div>
-          <div className="text-left">
+          <div className="text-left self-center">
             <h3 className="font-bold text-xl mb-4">Visión</h3>
             <p className="text-slate-700">
               Desde el año 2016 prestando servicios de mantención

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { FC } from "react";
 
 type BlogItemProps = {
-  key: number;
   title: string;
   imgSrc: string;
   authorImgSrc: string;
@@ -11,7 +10,6 @@ type BlogItemProps = {
 };
 
 const LastBlogsItem: FC<BlogItemProps> = ({
-  key,
   author,
   authorImgSrc,
   date,
@@ -20,9 +18,8 @@ const LastBlogsItem: FC<BlogItemProps> = ({
 }) => {
   return (
     <article
-      key={key}
-      className="flex flex-col justify-between w-full rounded-md border
-              lg:w-4/5 md:mx-auto md:flex-row"
+      className="flex flex-col justify-between w-full rounded-md border bg-white
+              md:mx-auto md:flex-row"
     >
       <div className="w-full h-52 md:w-1/3 md:h-44">
         <div className="w-full h-full relative">
